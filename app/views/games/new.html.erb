@@ -1,0 +1,8 @@
+<h1>New game</h1>
+<h2><%= @grid %></h2>
+<form action="/score" method="POST" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :grid, @grid %>
+  <input type="text" name="letter">
+  <input type="submit">
+</form>
